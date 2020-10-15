@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.3/css/unicons.css">
+    <style>
+/* Colors */
+:root {
+    --primary : #1a253f;
+    --dark : #151A33;
+    --secondary : #2b55cc;
+    --info : #4d79f6;
+    --ternary : #848db3;
+    --pure : #eff2f9;
+    --fade : #7081b9;
+    --mild : #8997bd;
+    --footer : #212A4A;
+    --black:#060b1b;
+    --twitter: #4ac7ec;
+    --dribbble : #ff5da0;
+    --success : #1ecab8;
+    --danger : #f1646c;
+    --dark-blue : #28365f;
+    --dark-gray: #171f33;
+    --yellow: #f3c74d;
+}
+
+/* Reset  */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--white);
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin:0;
+    line-height: 1;
+}
+
+.container {
+    max-width:1140px;
+    margin:0 auto;
+}
+
+nav {
+    background: var var(--black);
+    padding:1.6rem 0;
+}
+nav .inner {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .inner .logo {
+    text-transform: uppercase;
+    color: var(--black);
+    font-size:18px;
+    letter-spacing: 1px;
+    font-weight:500;
+}
+
+nav .inner .logo i {
+    color: var(--info);
+}
+
+nav .inner button {
+    background: var(--white);
+    border: none;
+    padding:0.6rem 1rem;
+    color:var(--black);
+    font-size:14px;
+    border-radius: 4px;
+
+}
+
+section.profile {
+    background: var(--black);
+    display:flex;
+    align-items: center;
+    padding:3rem;
+    margin-top: 60px;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 25% 100%, 0 80%);
+    padding-bottom:4rem;
+}
+section.profile .left {
+    flex:2;
+    display:flex;
+    align-items: center;
+}
+section.profile .right {
+    flex:1;
+}
+section.profile .left h2 {
+    color: var(--black);
+    font-size:24px;
+    font-weight: 600;
+    margin-bottom:1rem;
+}
+
+section.profile .left p {
+    color: var(--mild);
+    font-size:14px;
+}
+section.profile .left .cd-headline.loading-bar .cd-words-wrapper::after {
+    background: linear-gradient(to right, var(--secondary), var(--success));
+}
+
+section.profile .left p b {
+    padding-bottom:1rem;
+    font-weight: 400;
+}
+
+section.profile .left img {
+    width:128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+section.profile .left .avatar__block {
+    position: relative;
+    margin-right: 2rem;
+}
+section.profile .left .avatar__block span {
+    position:absolute;
+    right:4px;
+    bottom:4px;
+    background: var(--info);
+    width:32px;
+    height:32px;
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pure);
+    box-shadow : 0px 0px 20px 0px rgba(32, 41, 54, 0.05);
+    cursor:pointer;
+}
+
+section.profile .right ul.contact {
+    list-style-type: none;
+    margin-bottom: 1.6rem;
+}
+
+section.profile .right ul.contact li {
+    color: var(--ternary);
+    margin-bottom: .7rem;
+    font-size:14px;
+}
+section.profile .right ul.contact li i {
+    font-size: 18px;
+    margin-right:0.3rem;
+}
+
+section.profile .right ul.socials {
+    display:flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+section.profile .right ul.socials li {
+    margin-right: 0.8rem;
+}
+
+section.profile .right ul.socials li a {
+    display:inline-block;
+    width:36px;
+    height:36px;
+    border-radius: 50%;
+    color:var(--pure);
+    line-height:36px;
+    text-align:center;
+}
+
+section.profile .right ul.socials li:nth-child(1) a {
+    background:var(--secondary);
+}
+
+section.profile .right ul.socials li:nth-child(2) a {
+    background:var(--twitter);
+}
+
+section.profile .right ul.socials li:nth-child(3) a {
+    background:var(--dribbble);
+}
+
+.section__heading {
+    font-size: 16px;
+    font-weight: 500;
+    color:var(--pure);
+    margin-bottom:3rem;
+    text-shadow: 0 0 1px rgba(40, 54, 95, 0.1);
+    position: relative;
+}
+
+section {
+    padding: 3rem;
+}
+main {
+    background : var(--primary);
+}
+
+.section__heading:after {
+    content: '';
+    height: 3px;
+    width: 80px;
+    position: absolute;
+    top: 28px;
+    left:0;
+    border: 1px dotted var(--danger);
+}
+section.about .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16rem;
+}
+section.about .content h2 {
+    color: var(--info);
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+}
+section.about .content p {
+    color: var(--ternary);
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+    margin-bottom: 1rem;
+}
+
+section.about .content .left button{
+    background: rgba(77, 121, 246, 0.1);
+    color: var(--info);
+    padding: 4px 8px;
+    font-size: 12px;
+    border: none;
+    line-height: 24px;
+    outline: none;
+    cursor: pointer;
+}
+
+section.about .content .right p {
+    line-height: 1.6;
+    font-size: 14px;
+    color: var(--ternary);
+    letter-spacing: 0.1px;
+    margin-bottom: 1rem;
+}
+
+section.about .content .right p span:nth-child(1) {
+    width: 130px;
+    float: left;
+    font-weight: 500;
+    padding-right: 10px;
+    display: block;
+    position: relative;
+}
+
+section.about .content .right p span:nth-child(2) {
+    padding-left: 150px;
+    display: block;
+}
+
+
+section.about .content .right p span:nth-child(1):after {
+    content: ":";
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+section.skills .content {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+section.skills .content .left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section.skills .content .left .heading {
+    margin-bottom: 2rem;
+}
+
+section.skills .content .left .heading i {
+    color: var(--fade);
+    font-size: 52px;
+}
+section.skills .content .left .heading h5 {
+    font-size: 16px;
+    margin-top: 0.5rem;
+    color: var(--mild);
+}
+section.skills .content .left p {
+    font-size: 14px;
+    color: var(--ternary);
+    line-height: 1.7;
+}
+section.skills .content .left p.center {
+    color: var(--fade);
+}
+
+section.skills .content .left .item {
+    margin-bottom: 2.6rem;
+    margin-left: 15px;
+    position: relative;
+}
+
+section.skills .content .left .timeline__wrapper {
+    border-left: 2px dotted var(--dark-blue);
+}
+
+section.skills .content .left .item:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width:10px;
+    height: 10px;
+    border: 2px solid var(--info);
+    border-radius: 50%;
+    margin-left: -21px;
+}
+
+section.skills .skills__wrapper .skill-box h4 {
+    color: var(--ternary);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+section.skills .skills__wrapper .skill-box{
+    margin-bottom: 4rem;
+}
+
+section.skills .skills__wrapper .skill-box .progress__wrap {
+    background: #20294a;
+    height: 6px;
+    width: 100%;
+    box-shadow: 0px 0px 1px 0.25px #4d79f6;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+}
+section.skills .skills__wrapper .skill-box .progress__wrap .progress__bar {
+    display: block;
+    height: 100%;
+    background: var(--info);
+    width: 0;
+    position: relative;
+    transition:all 1s ease-in-out;
+}
+section.skills .skills__wrapper .skill-box .progress__wrap .progress__bar .tooltip {
+    position: absolute;
+    right: -15px;
+    top:-30px;
+    margin-bottom: 10px;
+    color: var(--ternary);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+section.counter__section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--dark-gray);
+}
+
+section.counter__section > div {
+    display: flex;
+    align-items: center;
+}
+
+section.counter__section > div i {
+    font-size: 42px;
+    margin-right: 5px;
+}
+
+section.counter__section > div:nth-child(1) i {
+    color: var(--yellow);
+}
+
+section.counter__section > div:nth-child(2) i {
+    color: var(--success);
+}
+
+section.counter__section > div:nth-child(3) i {
+    color: var(--dribbble);
+}
+
+section.counter__section > div h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--fade);
+    margin-bottom: 8px;
+}
+
+section.counter__section > div h5 {
+    font-size: 14px;
+    color: var(--fade);
+}
+
+section.work .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 60px;
+}
+
+section.work .wrapper .portfolio .tabs ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section.work .wrapper .portfolio .tabs ul li a {
+    color: var(--fade);
+    border-bottom: 1px solid transparent;
+    padding: 10px 15px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+section.work .wrapper .portfolio .tabs ul li a.active {
+    border-color: var(--info);
+    color: var(--info);
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+section.work .wrapper .portfolio .portfolio__wrapper {
+    margin-top: 4rem;
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+    display: flex;
+}
+
+section.work .wrapper .portfolio .portfolio__wrapper .item {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+section.work .wrapper .portfolio .portfolio__wrapper a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section.work .wrapper .slider__wrapper .icon__wrap {
+    color: var(--info);
+    font-size: 26px;
+    text-align: center;
+}
+
+section.work .wrapper .slider__wrapper .slider .slide p {
+    color: var(--ternary);
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+}
+
+section.work .wrapper .slider__wrapper .slider .slide img {
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+section.work .wrapper .slider__wrapper .slider .slide h2 {
+    font-size: 16px;
+    color: var(--info);
+    margin-top: 1rem;
+}
+
+section.work .wrapper .slider__wrapper .slider .slide h6 {
+    color: var(--ternary);
+    margin-top: 1rem;
+}
+section.work .wrapper .slider__wrapper .slider .slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.work .wrapper .slider__wrapper {
+    overflow: hidden;
+}
+
+section.partners .brands__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section.contact .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 60px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+section.contact .wrapper .left > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+section.contact .wrapper .left > div div:nth-child(1) {
+    margin-right: 10px;
+}
+section.contact .wrapper .left i {
+    font-size: 30px;
+    color: var(--info);
+}
+
+section.contact .wrapper .left h4 {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+section.contact .wrapper .left {
+    color: var(--ternary);
+}
+
+section.contact .wrapper .left h4 + span {
+    font-weight: 100;
+    font-size: 14px;
+}
+
+section.contact .wrapper .right .form__group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+section.contact .wrapper .right .form__group > div {
+    display: flex;
+    flex-direction: column;
+}
+
+section.contact .wrapper .right .form__group > div label {
+    color: var(--ternary);
+    margin-bottom: 8px;
+}
+
+section.contact .wrapper .right .form__group > div input, section.contact .wrapper .right .form__group.textarea__wrapper textarea {
+    padding: 10px;
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid var(--dark-blue);
+    color: var(--ternary);
+    font-size: 16px;
+}
+
+section.contact .wrapper .right .form__group > div input:focus, section.contact .wrapper .right .form__group.textarea__wrapper textarea:focus {
+    border-color: var(--secondary);
+    outline: none;
+}
+
+section.contact .wrapper .right .form__group.textarea__wrapper {
+    display: block;
+    width: 100%;
+}
+
+section.contact .wrapper .right button {
+    background: var(--info);
+    border: none;
+    padding: 1rem 2rem;
+    color: var(--pure);
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+section.contact .wrapper .right button:hover {
+    background: var(--secondary);
+
+}
+
+footer {
+    background: var(--footer);
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 14px;
+    color: var(--ternary);
+}
+
+/* Media Queries  */
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 1024px) {
+   section.profile {
+       flex-direction: column;
+       align-items: flex-start;
+       clip-path: none;
+   }
+
+   section.profile .left {
+       margin-bottom: 2rem;
+   }
+
+
+   section.profile .right {
+       align-self: flex-end;
+   }
+
+   section.work .wrapper{
+       display: block;
+   }
+   section.work .wrapper .slider__wrapper {
+       margin-bottom: 8rem;
+   }
+
+   section.partners {
+       margin-top: 4rem;
+   }
+}
+
+@media (max-width: 970px) {
+    section.skills .content{
+        display: block;
+    }
+    section.skills .content .left {
+        margin-bottom: 6rem;
+    }
+    section.partners .brands__wrapper{
+        flex-wrap: wrap;
+    }
+
+    section.partners .brands__wrapper img {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section.about .content {
+        display: block;
+    }
+
+    section.about .content .left {
+        margin-bottom: 6rem;
+    }
+
+    section.contact .wrapper {
+        display: block;
+    }
+    section.contact .wrapper .left {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    section.counter__section {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    section.counter__section > div {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    section.profile {
+        align-items: center; 
+    }
+
+    section.profile .right {
+        align-self: center;
+    }
+    section.profile .left {
+        margin-bottom: 6rem;
+    }
+
+    section.work .wrapper .portfolio .tabs ul{
+        flex-wrap: wrap;
+    }
+    section.work .wrapper .portfolio .tabs ul li {
+        margin-bottom: 4rem;
+    }
+
+    section.work .wrapper .portfolio .portfolio__wrapper {
+        margin-top: 0;
+    }
+
+    section.contact .wrapper .right .form__group {
+        grid-template-columns: 1fr;
+    }
+}
+body {
+    font-family: Arial;
+    color: white;
+  }
+  .port {
+    background-color: #333;
+    text-align: center;
+  }  
+  .split {
+    height: 70%;
+    width: 70%;
+    position: fixed;
+    z-index: 1;
+    top:a;
+    overflow-x: hidden;
+    padding-top: 10px;
+  }
+  
+  .split2 {
+    height: 70%;
+    width: 30%;
+    position: fixed;
+    z-index: 1;
+    top: 17%;
+    overflow-x: hidden;
+    padding-top: 15px;
+  }
+  
+
+
+
+
+  .left {
+    left: 0;
+       /* background-color: #111;  */  
+    
+  }
+  .right {
+    right:0;
+      /* background-color: red; */  
+  }
+  .right2 {
+    left: 60%;
+      /* background-color: red; */  
+  }
+  
+  .centered {
+    position: absolute;
+    top: 42%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .centered img {
+    width: 500px;
+    height: 500px;
+    border-radius: 10%;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color:red;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+
+
+  #stage {
+    margin: 1em auto;
+    width: 382px;
+    height: 292px;
+  }
+
+  #stage a {
+    position: absolute;
+  }
+  #stage a img {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+  }
+
+  #stage a:nth-of-type(1) {
+    animation-name: fader;
+    animation-delay: 4s;
+    animation-duration: 1s;
+    z-index: 20;
+  }
+  #stage a:nth-of-type(2) {
+    z-index: 10;
+  }
+  #stage a:nth-of-type(n+3) {
+    display: none;
+  }
+
+  @keyframes fader {
+    from { opacity: 1.0; }
+    to   { opacity: 0.0; }
+  }
+
+ 
+  
+  .list{
+    margin-left:2%;
+    font-size:large;
+  }
+  .qut{
+    color: black;
+    font-family: monospace;
+    font-size: large;
+  }
+
+  .footer {
+      /* margin-top: 30%; */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:black;
+    color: white;
+    max-width: 100%;
+    height: 20%;
+ }
+ 
+ 
+.fotter_content{
+  color:white;
+  font-family: monospace;
+  font-size: large;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 150px; /* Should be removed. Only for demonstration */
+  background-color:black;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.hh1{
+  color: #111;
+  font-family: monospace;
+}
+.header_fotter{
+  background-color:black; 
+    max-width: 100%;
+   height: 20%;
+}
+.footer_cv {
+  /* margin-top: 30%; */
+  width: 100%;
+  height: 2%;
+  position:absolute; 
+  left: 0;  
+  bottom: 0;
+
+background-color:black;
+color: white;
+
+}
+
+.footer_proposal {
+   /* margin-top: 30%; */
+  width: 100%;
+  max-height: 100%;
+  position:relative; 
+  left: 0;  
+  bottom: 0;
+  
+background-color:black;
+color: white;
+
+}
+
+
+
+
+.intro{
+  
+  max-width: 100%; 
+  max-height:60% ;
+  color: white;
+}
+.header_fotter_cv{
+  background-color:black; 
+    width: 100%;
+    height: 10%;
+        
+}
+
+.cv{
+  
+  max-width: 100%; 
+  height:80%;
+  color: black;
+  
+}
+
+.split3 {
+        
+  height: 80%;
+  max-width: 55%;
+  position: absolute;
+  z-index: 1;
+  
+  overflow-x: hidden;
+  /* padding-top: 20px; */
+}
+.split4 {
+        
+  height: 80%;
+  max-width: 45%;
+  position: absolute;
+  z-index: 1;
+  
+  overflow-x: hidden;
+  /* padding-top: 20px; */
+}
+
+.img_logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.img_val {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 100%;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid black;
+  margin-left: 200%;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  margin-left: 300%;
+  width: 20%;
+  padding: 10px;
+  background:blue;
+  color:white;
+  font-size: 17px;
+
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+
+
+
+    </style>
+    <title>CV</title>
+</head>
+
+<body>
+    <div class="header_fotter_cv" >
+        <h1 class="port">Amjad's CV</h1>
+           <ul>
+          <li class="list"><a href="index.html">Home</a></li>
+          <li class="list"><a  href="intro.html">INTRO</a></li>
+          <li class="list"><a class="active" href="CV.html">CV</a></li>
+          <li class="list"><a href="proposal.html">Project_Proposal</a></li>
+          <li class="list"><a href="readme.html">ReadMe</a></li>
+          <li class="list"><a href="validation.html">Validation</a></li>
+          
+         
+          
+        </ul> 
+      </div>
+
+
+    <main class="container">
+        <section class="profile" id="profile__ripple">
+            <div class="left">
+                <div class="avatar__block">
+                    <img src="https://scontent.fkhi8-1.fna.fbcdn.net/v/t1.0-9/93886938_903933513384996_3376844687028518912_n.jpg?_nc_cat=105&_nc_sid=8bfeb9&_nc_ohc=6TdcQ2HtsSsAX9tvsA2&_nc_ht=scontent.fkhi8-1.fna&oh=664bd0d77bb2678b8cd5874a92fbae48&oe=5FAA4562" alt="">
+                    <span>
+                        <i class="uil uil-comment-dots"></i>
+                    </span>
+                </div>
+                <div>
+                    <h2>Amjad Ali</h2>
+                    <p class="cd-headline loading-bar">
+                        <span class="cd-words-wrapper">
+                            <b class="is-visible">Web Developer</b>
+                            <b>Node Js Developer</b>
+                            <b>Angular Developer</b>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <ul class="contact">
+                    <li>
+                        <i class="uil uil-phone-volume"></i>
+                        <strong>Phone : </strong> +92 3183550827
+                    </li>
+                    <li>
+                        <i class="uil uil-envelope"></i>
+                        <strong>Email : </strong> amjadali1860@gmail.com
+                    </li>
+                </ul>
+                <ul class="socials">
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100013050678159">
+                            <i class="uil uil-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/amjadali2358">
+                            <i class="uil uil-dribbble"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="about">
+            <h1 class="section__heading">About US !</h1>
+            <div class="content">
+                <div class="left">
+                    <h2>I'm Amjad Ali</h2>
+                    <p>Full-stack Software Developer and Javascript Enthusiast, Who Likes Building Things In Javascript. Please visit my channel for awesome stuff 🔥 👨🏽‍💻🏅</p>
+                    <button>Download CV</button>
+
+                </div>
+                <div class="right">
+                    <p>
+                        <span>Name</span>
+                        <span>Amjad Ali</span>
+                    </p>
+                    <p>
+                        <span>Date of birth</span>
+                        <span>12 june 1998</span>
+                    </p>
+                    <p>
+                        <span>Spoken Langages</span>
+                        <span>English - Urdu - Sindhi- Balochi</span>
+                    </p>
+                    <p>
+                        <span>Nationality</span>
+                        <span>Pakistan</span>
+                    </p>
+                    <p>
+                        <span>Interest</span>
+                        <span>Music, Reading, Travel</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h1 class="section__heading">Education & Skills</h1>
+            <div class="content">
+                <div class="left">
+                    <div class="inner__left">
+                        <div class="heading">
+                            <i class="uil uil-graduation-cap"></i>
+                            <h5>Education</h5>
+                        </div>
+                        <div class="timeline__wrapper">
+                            <div class="item">
+                                <p>2009 - 2014</p>
+                                <p class="center">The Citizen Foundation</p>
+                                <p>Secondary Education</p>
+                            </div>
+                            <div class="item">
+                                <p>2017 - 2021</p>
+                                <p class="center">FAST University Karachi</p>
+                                <p>Bachelor of Computer Science</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner__right">
+                        <div class="heading">
+                            <i class="uil uil-suitcase-alt"></i>
+                            <h5>Experience</h5>
+                        </div>
+                        <div class="timeline__wrapper">
+                            <div class="item">
+                                <p>2019 - june (6 week Intern)</p>
+                                <p class="center">Stack Developer</p>
+                                <p>FOLIO3 Company</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="skills__wrapper">
+                        <div class="skill-box">
+                            <h4>Html5 & Css3</h4>
+                            <div class="progress__wrap">
+                                <span data-percent="78" class="progress__bar">
+                                    <span class="tooltip"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <h4>Javascript</h4>
+                            <div class="progress__wrap">
+                                <span data-percent="65" class="progress__bar">
+                                    <span class="tooltip"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <h4>WEB DESIGN</h4>
+                            <div class="progress__wrap">
+                                <span data-percent="90" class="progress__bar">
+                                    <span class="tooltip"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <h4>UI/UX DESIGN</h4>
+                            <div class="progress__wrap">
+                                <span data-percent="82" class="progress__bar">
+                                    <span class="tooltip"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="counter__section">
+            <div>
+                <div>
+                    <i class="uil uil-cell"></i>
+                </div>
+                <div>
+                    <h3><span class="counter" data-count="15">15</span>+</h3>
+                    <h5>Completed projects</h5>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <i class="uil uil-trophy"></i>
+                </div>
+                <div>
+                    <h3><span class="counter" data-count="8">8</span>+</h3>
+                    <h5>Certificate received</h5>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <h1 class="section__heading">Contact Me</h1>
+            <div class="wrapper">
+                <div class="left">
+                    <div>
+                        <div><i class="uil uil-phone-volume"></i></div>
+                        <div>
+                            <h4>Free Call To Me:</h4>
+                            <span>(+92) 03183550827</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div><i class="uil uil-envelope"></i></div>
+                        <div>
+                            <h4>Mail Me:</h4>
+                            <span>amjadali1860@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div><i class="uil uil-map-marker"></i></div>
+                        <div>
+                            <h4>Find Me:</h4>
+                            <span>Karachi, Pakistan</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <form action="">
+                        <div class="form__group">
+                            <div>
+                                <label for="">Name</label>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <label for="">Email</label>
+                                <input type="email">
+                            </div>
+                        </div>
+
+                        <div class="form__group textarea__wrapper">
+                            <div>
+                                <label for="">Message</label>
+                                <textarea name="" id="" cols="30" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit">Submit Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <span>© 2020. All rights reserved</span>
+    </footer>
+  
+    <script>
+$(document).ready(function(){
+
+$('#profile__ripple').ripples({
+    resolution: 512,
+    dropRadius:10
+});
+
+const bars = document.querySelectorAll('.progress__bar');
+
+bars.forEach(function(bar){
+    let percentage = bar.dataset.percent;
+    let tooltip = bar.children[0];
+    tooltip.innerText = percentage + '%';
+    bar.style.width = percentage + '%';
+})
+
+// Counter
+
+const counters = document.querySelectorAll('.counter');
+
+function runCounter () {
+    counters.forEach(counter => {
+        counter.innerText = 0;
+        let target = +counter.dataset.count;
+        let step = target / 100;
+        
+        let countIt = function() {
+            let displayedCount = +counter.innerText;
+            if(displayedCount < target) {
+                counter.innerText = Math.ceil(displayedCount + step);
+                setTimeout(countIt, 1);
+            } else {
+                counter.innerText = target;
+            }
+        }
+        countIt();
+
+    })
+
+}
+
+
+
+let counterSection = document.querySelector('.counter__section');
+
+let options = {
+    rootMargin : '0px 0px -200px 0px'
+}
+let done = 0; 
+
+const sectionObserver = new IntersectionObserver(function(entries){
+
+    if(entries[0].isIntersecting && done !== 1) {
+        done = 1;
+        runCounter();
+    }
+}, options)
+
+sectionObserver.observe(counterSection);
+
+
+
+// image filter 
+
+var $wrapper = $('.portfolio__wrapper');
+// Initialize isotope 
+$wrapper.isotope({
+    filter : '*',
+    layoutMode : 'masonry',
+    animationOptions : {
+        duration: 750,
+        easing: 'linear'
+    }
+});
+
+let links = document.querySelectorAll('.tabs a');
+
+links.forEach(link => {
+
+    let selector = link.dataset.filter;
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        $wrapper.isotope({
+            filter : selector,
+            layoutMode : 'masonry',
+            animationOptions : {
+                duration: 750,
+                easing: 'linear'
+            }
+        });
+
+        links.forEach(link =>{
+            link.classList.remove('active');
+        })
+
+        e.target.classList.add('active');
+
+    });
+})
+
+
+// Magnify pop up 
+console.log($('.magnify').magnificPopup)
+$('.magnify').magnificPopup({
+    type: 'image',
+    gallery: {
+        enabled : true
+    },
+    zoom : {
+        enable: true
+    }
+});
+
+// Slider
+
+$('.slider').slick({
+    arrows: false,
+    autoplay: true
+});
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+body {
+    font-family: Arial;
+    color: greenyellow;
+  }
+  .port {
+    background-color: rgb(red, green, blue);
+    text-align: center;
+  }  
+  .split {
+    height: 70%;
+    width: 70%;
+    position: fixed;
+    z-index: 1;
+    top:a;
+    overflow-x: hidden;
+    padding-top: 10px;
+  }
+  
+  .split2 {
+    height: 70%;
+    width: 30%;
+    position: fixed;
+    z-index: 1;
+    top: 17%;
+    overflow-x: hidden;
+    padding-top: 15px;
+  }
+  
+
+
+
+
+  .left {
+    left: 0;
+       /* background-color: #111;  */  
+    
+  }
+  .right {
+    right:0;
+      /* background-color: red; */  
+  }
+  .right2 {
+    left: 60%;
+      /* background-color: red; */  
+  }
+  
+  .centered {
+    position: absolute;
+    top: 42%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .centered img {
+    width: 500px;
+    height: 500px;
+    border-radius: 10%;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: blue;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+
+
+  #stage {
+    margin: 1em auto;
+    width: 382px;
+    height: 292px;
+  }
+
+  #stage a {
+    position: absolute;
+  }
+  #stage a img {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+  }
+
+  #stage a:nth-of-type(1) {
+    animation-name: fader;
+    animation-delay: 4s;
+    animation-duration: 1s;
+    z-index: 20;
+  }
+  #stage a:nth-of-type(2) {
+    z-index: 10;
+  }
+  #stage a:nth-of-type(n+3) {
+    display: none;
+  }
+
+  @keyframes fader {
+    from { opacity: 1.0; }
+    to   { opacity: 0.0; }
+  }
+
+  .ADJUST{
+    /* margin-top: 7.5%; */
+    /* background-color:silver;    */
+  }
+  
+  .list{
+    margin-left:2%;
+    font-size:large;
+  }
+  .qut{
+    color: black;
+    font-family: monospace;
+    font-size: large;
+  }
+
+  .footer {
+      /* margin-top: 30%; */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:black;
+    color: white;
+    max-width: 100%;
+    height: 20%;
+ }
+ 
+ 
+.fotter_content{
+  color:white;
+  font-family: monospace;
+  font-size: large;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 150px; /* Should be removed. Only for demonstration */
+  background-color:black;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.hh1{
+  color: #111;
+  font-family: monospace;
+}
+.header_fotter{
+  background-color:black; 
+    max-width: 100%;
+   height: 20%;
+}
+.footer_cv {
+  /* margin-top: 30%; */
+  width: 100%;
+  height: 2%;
+  position:absolute; 
+  left: 0;  
+  bottom: 0;
+
+background-color:black;
+color: white;
+
+}
+
+.footer_proposal {
+   /* margin-top: 30%; */
+  width: 100%;
+  max-height: 100%;
+  position:relative; 
+  left: 0;  
+  bottom: 0;
+  
+background-color:black;
+color: white;
+
+}
+
+
+
+
+.intro{
+  
+  max-width: 100%; 
+  max-height:60% ;
+  color: black;
+}
+.header_fotter_cv{
+  background-color:black; 
+    width: 100%;
+    height: 10%;
+        
+}
+
+.cv{
+  
+  max-width: 100%; 
+  height:80%;
+  color: black;
+  
+}
+
+.split3 {
+        
+  height: 80%;
+  max-width: 55%;
+  position: absolute;
+  z-index: 1;
+  
+  overflow-x: hidden;
+  /* padding-top: 20px; */
+}
+.split4 {
+        
+  height: 80%;
+  max-width: 45%;
+  position: absolute;
+  z-index: 1;
+  
+  overflow-x: hidden;
+  /* padding-top: 20px; */
+}
+
+.img_logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.img_val {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 100%;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  margin-left: 200%;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  margin-left: 300%;
+  width: 20%;
+  padding: 10px;
+  background:blue;
+  color:white;
+  font-size: 17px;
+
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.temp1{
+  text-align: center;
+  font-size: xx-large;
+}
+body{
+  background-color: rebeccapurple;
+}
+
+
